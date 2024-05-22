@@ -7,6 +7,56 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <style>
+    /* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.featured {
+  text-align: center;
+}
+
+.episode {
+  display: inline-block;
+  margin: 20px;
+}
+
+.episode img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.episode h3 {
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+  </style>
   <header>
     <h1>Universe's Best Podcast</h1>
     <nav>
@@ -36,6 +86,15 @@
   <footer>
     <p>&copy; 2024 Universe's Best Podcast</p>
   </footer>
-  <script src="JS/script.js"></script>
+  <script>
+    // script.js (Optional, for interactivity)
+document.querySelectorAll('.episode img').forEach(image => {
+  image.addEventListener('click', () => {
+    // Redirect to another page when image is clicked
+    window.location.href = image.parentElement.getAttribute('href');
+  });
+});
+
+  </script>
 </body>
 </html>
