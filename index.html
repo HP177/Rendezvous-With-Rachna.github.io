@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rendezvous With Rachna</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <style>
+    /* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.featured {
+  text-align: center;
+}
+
+.episode {
+  display: inline-block;
+  margin: 20px;
+}
+
+.episode img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.episode h3 {
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* styles.css */
+.episode img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Added transition property */
+}
+
+.episode img:hover {
+  transform: scale(1.1); /* Added scale transformation on hover */
+}
+
+  </style>
+  <header>
+    <!-- Add this HTML code where you want the search input field to appear -->
+<form id="searchForm" class="search-form">
+  <input type="text" id="searchInput" placeholder="Search...">
+  <button type="submit">Search</button>
+</form>
+
+    <h1>Rendezvous With Rachna</h1>
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="episodes.html">Episodes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="Blogs.html">Blogs</a></li>
+          <li><a href="newsletterform.html">News Letter</a></li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <section class="featured">
+      <h2>Featured Episodes</h2>
+      <div class="episode">
+        <a href="Episode1.html">
+          <img src="Images/Cover Rajesh Tiwari.jpg" alt="Episode 2">
+          <h3>Meeting with SHRI. RAJESH TIWARI</h3>
+        </a>
+      </div>
+      <div class="episode">
+        <a href="Episode2.html">
+          <img src="Images/cs 1 tOPPER cOVER.jpg" alt="Episode 1">
+          <h3>Meeting with CS MANYA SHRIVASTAVA</h3>
+        </a>
+      </div>
+    </section>
+    <section class="Upcoming">
+      <h2>Upcoming Podcasts</h2>
+      <div class="episode">
+        <a href="episode1.html">
+          <img src="Images/5.jpg" alt="Episode 1">
+          <h3>Episode 1: The Big Bang</h3>
+        </a>
+      </div>
+      <div class="episode">
+        <a href="episode1.html">
+          <img src="Images/1.jpg" alt="Episode 1">
+          <h3>Episode 1: The Big Bang</h3>
+        </a>
+      </div>
+      <div class="episode">
+        <a href="episode1.html">
+          <img src="Images/1.jpg" alt="Episode 1">
+          <h3>Episode 1: The Big Bang</h3>
+        </a>
+      </div>
+      <div class="episode">
+        <a href="episode1.html">
+          <img src="Images/1.jpg" alt="Episode 1">
+          <h3>Episode 1: The Big Bang</h3>
+        </a>
+      </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Universe's Best Podcast</p>
+  </footer>
+  <script>
+    // script.js (Optional, for interactivity)
+document.querySelectorAll('.episode img').forEach(image => {
+  image.addEventListener('click', () => {
+    // Redirect to another page when image is clicked
+    window.location.href = image.parentElement.getAttribute('href');
+  });
+});
+
+  </script>
+</body>
+</html>
