@@ -7,6 +7,700 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+   <style>
+    /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .featured {
+    text-align: center;
+  }
+  
+  .episode {
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  .episode img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .episode h3 {
+    margin-top: 10px;
+  }
+  
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  /* styles.css */
+.episode img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Added transition property */
+  }
+  
+  .episode img:hover {
+    transform: scale(1.1); /* Added scale transformation on hover */
+  }
+  /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .about {
+    text-align: center;
+  }
+  
+  .about h2 {
+    margin-bottom: 20px;
+  }
+  
+  .hosts {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .host {
+    margin: 0 20px;
+  }
+  
+  .host img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .episodes {
+    text-align: center;
+  }
+  
+  .episode-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .episode {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    width: 300px;
+  }
+  
+  .episode:hover {
+    transform: scale(1.05);
+  }
+  
+  .episode img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .episode h3 {
+    margin: 10px 0;
+  }
+  
+  .episode p {
+    padding: 0 10px 10px;
+  }
+  
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  /* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.contact {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.episodes {
+  text-align: center;
+}
+
+.episode-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.episode {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  width: 300px;
+  text-align: left;
+}
+
+.episode:hover {
+  transform: scale(1.05);
+}
+
+.episode img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.episode h3 {
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.episode p {
+  padding: 0 10px 10px;
+}
+
+.player {
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.blog {
+  text-align: center;
+}
+
+.blog h2 {
+  margin-bottom: 20px;
+}
+
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blog-post {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  width: 300px;
+  text-align: left;
+}
+
+.blog-post:hover {
+  transform: scale(1.05);
+}
+
+.blog-post img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-post h3 a {
+  text-decoration: none;
+  color: #000;
+}
+
+.blog-post p {
+  padding: 0 10px 10px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.newsletter {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter h2 {
+  margin-bottom: 20px;
+}
+
+.newsletter p {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.episode-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-player {
+  position: relative;
+  background: #000;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.video-player video {
+  width: 100%;
+  height: 400px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 10px;
+}
+
+.controls button, .controls input, .controls span {
+  color: #fff;
+  background: none;
+  border: none;
+}
+
+.controls input[type="range"] {
+  flex: 1;
+  margin: 0 10px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 12px;
+}
+/* Add this CSS to your existing styles.css file */
+.social-sharing {
+  margin-top: 20px;
+}
+
+.social-sharing ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-sharing li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-sharing a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.social-sharing a:hover {
+  background-color: #333;
+  color: #fff;
+}
+/* Add this CSS code to your existing styles.css file */
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+#searchInput {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+#searchInput:focus {
+  outline: none;
+}
+
+#searchForm button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+#searchForm button:hover {
+  background-color: #0056b3;
+}
+
+  </style>
   <header>
     <h1>Contact Universe's Best Podcast</h1>
     <nav>
@@ -55,6 +749,158 @@
     </section>
     <p>&copy; 2024 Universe's Best Podcast</p>
   </footer>
-  <script src="JS/script.js"></script>
+   <script>
+      // script.js (Optional, for interactivity)
+document.querySelectorAll('.episode img').forEach(image => {
+    image.addEventListener('click', () => {
+      // Redirect to another page when image is clicked
+      window.location.href = image.parentElement.getAttribute('href');
+    });
+  });
+  // script.js
+document.querySelectorAll('.episode img').forEach(image => {
+    image.addEventListener('click', () => {
+      window.location.href = image.parentElement.getAttribute('href');
+    });
+  });
+  // script.js
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Get form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  // Simple validation
+  if (name && email && message) {
+    alert('Thank you for your message! We will get back to you soon.');
+    // Here you can add code to actually send the form data to your server
+  } else {
+    alert('Please fill in all fields.');
+  }
+});
+// script.js
+document.querySelectorAll('.episode img').forEach(image => {
+  image.addEventListener('click', function() {
+    window.location.href = this.parentElement.getAttribute('href');
+  });
+});
+// script.js
+document.querySelectorAll('.blog-post img').forEach(image => {
+  image.addEventListener('click', function() {
+    window.location.href = this.parentElement.querySelector('a').getAttribute('href');
+  });
+});
+// script.js
+document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const email = document.getElementById('email').value;
+
+  if (email) {
+    // Example: Display a thank you message
+    alert('Thank you for subscribing!');
+
+    // Here you would add code to submit the email to your mailing service
+    // Example: Using fetch to post data to a server
+    // fetch('https://your-mailing-service-api.com/subscribe', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify({ email: email })
+    // })
+    // .then(response => response.json())
+    // .then(data => console.log(data))
+    // .catch(error => console.error('Error:', error));
+  } else {
+    alert('Please enter a valid email address.');
+  }
+});
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+  const videoPlayer = document.getElementById('videoPlayer');
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  const muteBtn = document.getElementById('muteBtn');
+  const seekBar = document.getElementById('seekBar');
+  const currentTime = document.getElementById('currentTime');
+  const duration = document.getElementById('duration');
+
+  // Play/Pause functionality
+  playPauseBtn.addEventListener('click', function() {
+    if (videoPlayer.paused) {
+      videoPlayer.play();
+      playPauseBtn.textContent = 'Pause';
+    } else {
+      videoPlayer.pause();
+      playPauseBtn.textContent = 'Play';
+    }
+  });
+
+  // Mute/Unmute functionality
+  muteBtn.addEventListener('click', function() {
+    videoPlayer.muted = !videoPlayer.muted;
+    muteBtn.textContent = videoPlayer.muted ? 'Unmute' : 'Mute';
+  });
+
+  // Update seek bar as the video plays
+  videoPlayer.addEventListener('timeupdate', function() {
+    const value = (100 / videoPlayer.duration) * videoPlayer.currentTime;
+    seekBar.value = value;
+    currentTime.textContent = formatTime(videoPlayer.currentTime);
+  });
+
+  // Seek functionality
+  seekBar.addEventListener('input', function() {
+    const time = videoPlayer.duration * (seekBar.value / 100);
+    videoPlayer.currentTime = time;
+  });
+
+  // Display video duration
+  videoPlayer.addEventListener('loadedmetadata', function() {
+    duration.textContent = formatTime(videoPlayer.duration);
+  });
+
+  // Format time in minutes and seconds
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+  }
+});
+// Add this JavaScript to your existing script.js file
+document.addEventListener('DOMContentLoaded', function() {
+  const socialLinks = document.querySelectorAll('.social-sharing a');
+  socialLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const url = this.href;
+      window.open(url, '_blank');
+    });
+  });
+});
+// Add this JavaScript code to your existing script.js file
+document.addEventListener('DOMContentLoaded', function() {
+  const searchForm = document.getElementById('searchForm');
+  const searchInput = document.getElementById('searchInput');
+
+  searchForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    search(searchTerm);
+  });
+
+  function search(term) {
+    // Replace this with your own logic to search through your content
+    // For example, you can search through episode titles or blog post titles
+    // and display the results on a search results page or dynamically on the current page
+    console.log('Searching for:', term);
+    // Example: You can search through episode titles
+    // and display matching episodes on a search results page
+  }
+});
+
+    </script>
 </body>
 </html>
