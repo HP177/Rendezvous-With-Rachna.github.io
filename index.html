@@ -8,21 +8,19 @@
 <body>
   <style>
   .video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
 }
 
 .video-background video {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire section */
 }
 
 .video-background .content {
@@ -34,6 +32,7 @@
     color: white; /* Example color for text */
     /* Additional styling for your content */
 }
+
 
 
   /* styles.css */
