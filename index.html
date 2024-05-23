@@ -7,8 +7,43 @@
 </head>
 <body>
 
+   <div id="loading-screen">
+    <div class="loading-content">
+      <img src="Loading.gif" alt="Loading GIF">
+    </div>
+  </div>
+
   <style>
-/* styles.css */
+ /* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0s ease-out;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-content img {
+  max-width: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
 
     
 /* Responsive Design */
@@ -813,6 +848,20 @@ footer {
     <p>&copy; 2024 Rendezvous With Rachna </p>
   </footer>
     <script>
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        // Fade out the loading screen
+        document.getElementById('loading-screen').style.opacity = '0';
+        setTimeout(function() {
+            // Hide the loading screen and show the main content
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }, 500); // Match this timeout with the CSS transition duration
+    }, 3000); // 3000 milliseconds = 3 seconds
+});
+    
+      
     // script.js (Optional, for interactivity)
 document.querySelectorAll('.episode img').forEach(image => {
     image.addEventListener('click', () => {
