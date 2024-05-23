@@ -6,7 +6,41 @@
   <title>Meeting With SHRI RAJESH TIWARI</title>
 </head>
 <body>
+   <div id="loading-screen">
+    <div class="loading-content">
+      <img src="loading.gif" alt="Loading GIF">
+      <p>Watch Preview (In Development)</p>
+    </div>
+  </div>
   <style>
+    /* Loading Screen */
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-out;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-content img {
+  max-width: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
     /* styles.css */
 body {
     font-family: Arial, sans-serif;
@@ -881,6 +915,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // and display matching episodes on a search results page
   }
 });
+
+    document.addEventListener('DOMContentLoaded', () => {
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(() => {
+    loadingScreen.classList.add('fade-out');
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 1000); // Allow time for fade-out transition
+  }, 3000); // 3 seconds timeout
+});
+
 
   </script>
 </body>
