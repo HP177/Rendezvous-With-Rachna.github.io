@@ -7,21 +7,22 @@
 </head>
 <body>
   
-  <style>
-    .video-background {
-    position: relative;
-    overflow: hidden;
-    width: 150%;
-    height: 100vh; /* Adjust as needed */
-}
-
-.video-background video {
-    position: absolute;
+  .video-background {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the entire section */
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .video-background .content {
@@ -30,12 +31,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    color: black; /* Example color for text */
+    color: white; /* Example color for text */
     /* Additional styling for your content */
 }
 
-
-   
 
   /* styles.css */
 body {
