@@ -7,6 +7,83 @@
 </head>
 <body>
   <style>
+
+    /* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Banner Section */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.banner-content {
+  max-width: 50%;
+}
+
+.banner-photo img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+/* Other styles remain the same */
+.episode img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Added transition property */
+}
+
+.episode img:hover {
+  transform: scale(1.1); /* Added scale transformation on hover */
+}
+
   /* styles.css */
 body {
     font-family: Arial, sans-serif;
@@ -728,6 +805,16 @@ footer {
       </nav>
   </header>
   <main>
+
+     <section class="banner">
+    <div class="banner-content">
+      <h2>Welcome to the Best Podcast in the Universe!</h2>
+      <p>Join us for insightful discussions and amazing episodes.</p>
+    </div>
+    <div class="banner-photo">
+      <img src="Images/person-photo.jpg" alt="Podcast Host">
+    </div>
+  </section>
     <section class="featured">
       <h2>Featured Episodes</h2>
       <div class="episode">
@@ -953,7 +1040,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-
+ document.querySelectorAll('.episode img').forEach(image => {
+      image.addEventListener('click', () => {
+        // Redirect to another page when image is clicked
+        window.location.href = image.parentElement.getAttribute('href');
+      });
+    });
     </script>
 </body>
 </html>
