@@ -917,18 +917,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
- document.addEventListener('DOMContentLoaded', function () {
-  // Set a timeout for 3 seconds
-  setTimeout(function () {
-    const loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.style.transition = 'opacity 1s ease';
-    loadingScreen.style.opacity = '0';
-
-    // Wait for the transition to end before removing the loading screen from the DOM
-    loadingScreen.addEventListener('transitionend', function () {
-      loadingScreen.style.display = 'none';
-    });
-  }, 3000); // 3000 milliseconds = 3 seconds
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        // Fade out the loading screen
+        document.getElementById('loading-screen').style.opacity = '0';
+        setTimeout(function() {
+            // Hide the loading screen and show the main content
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }, 500); // Match this timeout with the CSS transition duration
+    }, 3000); // 3000 milliseconds = 3 seconds
 });
 
 
