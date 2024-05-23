@@ -13,10 +13,7 @@
     </div>
   </div>
   <style>
-    /* styles.css */
-/* styles.css */
-
-#loading-screen {
+   #loading-screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -28,7 +25,7 @@
   align-items: center;
   z-index: 9999;
   opacity: 1;
-  transition: opacity 0.5s ease-out; /* Ensure this transition is here */
+  transition: opacity 0.5s ease-out;
 }
 
 .loading-content {
@@ -1005,16 +1002,22 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   const loadingScreen = document.getElementById('loading-screen');
 
+ // script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+
   // Hide the loading screen after 3 seconds with a fade-out effect
   setTimeout(function() {
-    loadingScreen.style.transition = 'opacity 0.5s ease-out';
     loadingScreen.style.opacity = '0';
-    
-    setTimeout(function() {
+
+    // Wait for the transition to complete before setting display to 'none'
+    loadingScreen.addEventListener('transitionend', function() {
       loadingScreen.style.display = 'none';
-    }, 500); // Wait for the transition to complete before setting display to 'none'
+    });
   }, 3000);
 });
+
 
 
     </script>
