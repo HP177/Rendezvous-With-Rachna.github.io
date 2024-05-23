@@ -8,7 +8,7 @@
 <body>
    <div id="loading-screen">
     <div class="loading-content">
-      <img src="loading.gif" alt="Loading">
+      <img src="Loading.gif" alt="Loading">
       <p>Watch Preview (In Development)</p>
     </div>
   </div>
@@ -1069,13 +1069,20 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = image.parentElement.getAttribute('href');
       });
     });
-
-      // script.js
+      
+// script.js
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Hide the loading screen after 3 seconds
+  const loadingScreen = document.getElementById('loading-screen');
+
+  // Hide the loading screen after 3 seconds with a fade-out effect
   setTimeout(function() {
-    document.getElementById('loading-screen').style.display = 'none';
+    loadingScreen.style.transition = 'opacity 0.5s ease-out';
+    loadingScreen.style.opacity = '0';
+    
+    setTimeout(function() {
+      loadingScreen.style.display = 'none';
+    }, 500); // Wait for the transition to complete before setting display to 'none'
   }, 3000);
 });
 
