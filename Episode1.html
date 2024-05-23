@@ -9,13 +9,14 @@
    <div id="loading-screen">
     <div class="loading-content">
       <img src="L2.gif" alt="Loading GIF">
-      <p>Watch Preview (In Development)</p>
     </div>
   </div>
   <style>
     /* Loading Screen */
 #loading-screen {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -916,14 +917,18 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-    document.addEventListener('DOMContentLoaded', () => {
-  const loadingScreen = document.getElementById('loading-screen');
-  setTimeout(() => {
-    loadingScreen.classList.add('fade-out');
-    setTimeout(() => {
+ document.addEventListener('DOMContentLoaded', function () {
+  // Set a timeout for 3 seconds
+  setTimeout(function () {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.transition = 'opacity 1s ease';
+    loadingScreen.style.opacity = '0';
+
+    // Wait for the transition to end before removing the loading screen from the DOM
+    loadingScreen.addEventListener('transitionend', function () {
       loadingScreen.style.display = 'none';
-    }, 1000); // Allow time for fade-out transition
-  }, 3000); // 3 seconds timeout
+    });
+  }, 3000); // 3000 milliseconds = 3 seconds
 });
 
 
