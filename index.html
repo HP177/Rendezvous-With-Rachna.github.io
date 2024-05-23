@@ -13,7 +13,16 @@
     </div>
   </div>
   <style>
-   #loading-screen {
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#loading-screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -36,6 +45,63 @@
   width: 50px;
   height: 50px;
 }
+
+header, main, footer {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.featured {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.featured h2 {
+  margin-bottom: 20px;
+}
+
+.episode {
+  display: inline-block;
+  margin: 20px;
+}
+
+.episode img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.episode img:hover {
+  transform: scale(1.1);
+}
+
+.episode h3 {
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 
 /* Responsive Design */
 @media (max-width: 600px) {
@@ -1002,11 +1068,6 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   const loadingScreen = document.getElementById('loading-screen');
 
- // script.js
-
-document.addEventListener('DOMContentLoaded', function() {
-  const loadingScreen = document.getElementById('loading-screen');
-
   // Hide the loading screen after 3 seconds with a fade-out effect
   setTimeout(function() {
     loadingScreen.style.opacity = '0';
@@ -1014,7 +1075,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Wait for the transition to complete before setting display to 'none'
     loadingScreen.addEventListener('transitionend', function() {
       loadingScreen.style.display = 'none';
-    });
+    }, { once: true }); // Ensure the event listener only runs once
   }, 3000);
 });
 
