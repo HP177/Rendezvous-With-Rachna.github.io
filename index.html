@@ -14,6 +14,12 @@
   </div>
 
   <style>
+
+html {
+    scroll-behavior: smooth;
+}
+
+    
  /* Loading Screen */
 #loading-screen {
   position: fixed;
@@ -1019,6 +1025,27 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = image.parentElement.getAttribute('href');
       });
     });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const scrollLinks = document.querySelectorAll('a[href^="#"]');
+    
+    for (const scrollLink of scrollLinks) {
+        scrollLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            
+            const targetId = scrollLink.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
+    }
+});
+
       
     </script>
 </body>
